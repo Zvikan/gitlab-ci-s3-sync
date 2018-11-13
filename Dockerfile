@@ -14,6 +14,8 @@ RUN apk add --update --no-cache \
 
 COPY sync.sh /bin/
 
+EXPOSE 80
+
 ENTRYPOINT ["/bin/bash" , "-c"]
 
 CMD ["/bin/sync.sh"]
