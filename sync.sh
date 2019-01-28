@@ -57,5 +57,5 @@ aws s3 sync --region ${PLUGIN_REGION} ${PLUGIN_DELETE} ${EXCLUDE} ${ACL} ${INCLU
 
 
 if [ -n "$PLUGIN_CLOUDFRONT_DISTRIBUTION_ID" ]; then
-  aws cloudfront create-invalidation --region $PLUGIN_REGION --distribution-id $PLUGIN_CLOUDFRONT_DISTRIBUTION_ID --paths /*
+  aws cloudfront create-invalidation --region $PLUGIN_REGION --distribution-id $PLUGIN_CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
 fi
